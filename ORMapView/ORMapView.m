@@ -227,6 +227,10 @@
 
 - (void)_clusterInMapRect:(MKMapRect)rect
 {
+    if(!self.clusteringEnabled) {
+        return;
+    }
+    
     NSArray * clusters = [_rootMapCluster find:self.maximumNumberOfClusters childrenInMapRect:rect];
         
     NSMutableArray* singleAnnotationsToShow = [NSMutableArray array];
