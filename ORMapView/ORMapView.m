@@ -79,7 +79,7 @@
 
 - (NSArray*)annotations
 {
-    return _userAnnotations;
+    return [_userAnnotations copy];
 }
 
 - (void)addAnnotation:(id < MKAnnotation >)annotation
