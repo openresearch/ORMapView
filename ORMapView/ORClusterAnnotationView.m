@@ -12,6 +12,10 @@
 
 #define TEXT_INSET 8
 
+@interface MKAnnotationView (iOS7TintColor)
+- (void)tintColorDidChange;
+@end
+
 
 @interface ORClusterAnnotationView ()
 
@@ -25,7 +29,7 @@
 {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.font = [UIFont fontWithName: @"HelveticaNeue" size: 12];
+        self.font = [UIFont systemFontOfSize:12];
         
         self.opaque = NO;
         
@@ -42,28 +46,32 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    // System tint color or black default
+    UIColor* tintColor;
+    if([self respondsToSelector:@selector(tintColor)]) {
+        tintColor = [self performSelector:@selector(tintColor)];
+    }
+    
+    if(!tintColor) {
+        tintColor = [UIColor blackColor];
+    }
+
+    
+    
+    // Oval
     CGRect ovalRect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(1, 1, 1, 1));
 
     UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect:ovalRect];
     [[UIColor whiteColor] setFill];
     [ovalPath fill];
-    
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        [[UIColor blackColor] setStroke];
-
-    } else {
-        [self.tintColor setStroke];
-    }
-    
+    [tintColor setStroke];
     ovalPath.lineWidth = 1;
     [ovalPath stroke];
     
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        [[UIColor blackColor] setFill];
-        
-    } else {
-        [self.tintColor setFill];
-    }
+    
+    
+    // Text
+    [tintColor setFill];
     
     NSString* annotationsCount = [self _text];
     
@@ -72,15 +80,18 @@
     CGFloat textX = (rect.size.width - textSize.width)/2.0;
     
     CGRect textRect = CGRectMake(textX, textY, textSize.width, textSize.height);
-    [annotationsCount drawInRect: textRect withFont: [UIFont fontWithName: @"Helvetica" size: 12] lineBreakMode: NSLineBreakByTruncatingMiddle alignment: NSTextAlignmentCenter];
+    [annotationsCount drawInRect: textRect withFont:self.font lineBreakMode: NSLineBreakByTruncatingMiddle alignment: NSTextAlignmentCenter];
 }
 
 
 - (void)tintColorDidChange
 {
-    [super tintColorDidChange];
+    if([super respondsToSelector:@selector(tintColorDidChange)]) {
+        [super tintColorDidChange];
+    }
     [self setNeedsDisplay];
 }
+
 
 - (NSString*)_text
 {
