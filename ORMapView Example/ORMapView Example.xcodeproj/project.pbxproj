@@ -23,6 +23,8 @@
 		0D79494017D9F926006DC4AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D79493E17D9F926006DC4AD /* InfoPlist.strings */; };
 		0D79494217D9F926006DC4AD /* ORMapView_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D79494117D9F926006DC4AD /* ORMapView_ExampleTests.m */; };
 		0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7417DCA99400D2F63E /* ORMapView.m */; };
+		0DBEFD7717DCAC4300D2F63E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBEFD7617DCAC4300D2F63E /* MapKit.framework */; };
+		0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		0D79494117D9F926006DC4AD /* ORMapView_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORMapView_ExampleTests.m; sourceTree = "<group>"; };
 		0DBEFD7317DCA99400D2F63E /* ORMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORMapView.h; sourceTree = "<group>"; };
 		0DBEFD7417DCA99400D2F63E /* ORMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORMapView.m; sourceTree = "<group>"; };
+		0DBEFD7617DCAC4300D2F63E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0DBEFD7A17DCCD5D00D2F63E /* ORRandomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORRandomAnnotation.h; sourceTree = "<group>"; };
+		0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORRandomAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			files = (
 				0D79491617D9F926006DC4AD /* CoreGraphics.framework in Frameworks */,
 				0D79491817D9F926006DC4AD /* UIKit.framework in Frameworks */,
+				0DBEFD7717DCAC4300D2F63E /* MapKit.framework in Frameworks */,
 				0D79491417D9F926006DC4AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +113,7 @@
 		0D79491217D9F926006DC4AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DBEFD7617DCAC4300D2F63E /* MapKit.framework */,
 				0D79491317D9F926006DC4AD /* Foundation.framework */,
 				0D79491517D9F926006DC4AD /* CoreGraphics.framework */,
 				0D79491717D9F926006DC4AD /* UIKit.framework */,
@@ -124,6 +131,8 @@
 				0D79492817D9F926006DC4AD /* Main_iPad.storyboard */,
 				0D79492B17D9F926006DC4AD /* ORViewController.h */,
 				0D79492C17D9F926006DC4AD /* ORViewController.m */,
+				0DBEFD7A17DCCD5D00D2F63E /* ORRandomAnnotation.h */,
+				0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */,
 				0D79492E17D9F926006DC4AD /* Images.xcassets */,
 				0D79491A17D9F926006DC4AD /* Supporting Files */,
 			);
@@ -217,6 +226,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Philipp Schmid";
 				TargetAttributes = {
+					0D79490F17D9F926006DC4AD = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					0D79493317D9F926006DC4AD = {
 						TestTargetID = 0D79490F17D9F926006DC4AD;
 					};
@@ -272,6 +288,7 @@
 				0D79492017D9F926006DC4AD /* main.m in Sources */,
 				0D79492417D9F926006DC4AD /* ORAppDelegate.m in Sources */,
 				0D79492D17D9F926006DC4AD /* ORViewController.m in Sources */,
+				0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,6 +438,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

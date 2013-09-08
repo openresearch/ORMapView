@@ -13,5 +13,6 @@
 @interface ORViewController : UIViewController <MKMapViewDelegate>
 
 @property(strong) IBOutlet ORMapView* mapView;
+@property(strong) IBOutlet UIStepper* annotationsCountStepper;
 
 @end
