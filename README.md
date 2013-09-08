@@ -4,9 +4,10 @@
 
 `ORMapView` is actually a fork of [ADClusterMapView][]
 
-[ADClusterMapView]: [https://github.com/applidium/ADClusterMapView]
+[ADClusterMapView]: https://github.com/applidium/ADClusterMapView
 
-I liked their cluster implementation, but didn't need the complex animation code. I also wanted `ORMapView` to be a true drop-in replacement of `MKMapView` that does not wrap annotations in it's own `MKAnnotation` implementation, forcing you to modify your existing `MKMapViewDelegate` code.
+I liked their cluster implementation, but didn't need the complex animation code.
+I also wanted `ORMapView` to be a true drop-in replacement for `MKMapView` that does not wrap annotations in it's own `MKAnnotation` implementation, forcing you to modify your existing `MKMapViewDelegate` code.
 
 The cluster algorithm and code itself (the hard part) is a plain copy from `ADClusterMapView`.
 The algorithm concept is described on Applidium's [website][].
