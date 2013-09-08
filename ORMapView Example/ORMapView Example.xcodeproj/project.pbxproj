@@ -19,8 +19,8 @@
 		0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7417DCA99400D2F63E /* ORMapView.m */; };
 		0DBEFD7717DCAC4300D2F63E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBEFD7617DCAC4300D2F63E /* MapKit.framework */; };
 		0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */; };
-		0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */; };
+		0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */; };
 		0DBEFD8617DCE8A900D2F63E /* ORMapView_DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */; };
 		0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */; };
 		0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */; };
@@ -365,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
@@ -379,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
