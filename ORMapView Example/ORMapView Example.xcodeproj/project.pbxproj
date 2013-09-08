@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D46560617DD44E400A72E4C /* NSObject+ORDebounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */; };
 		0D79491417D9F926006DC4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491317D9F926006DC4AD /* Foundation.framework */; };
 		0D79491617D9F926006DC4AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491517D9F926006DC4AD /* CoreGraphics.framework */; };
 		0D79491817D9F926006DC4AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491717D9F926006DC4AD /* UIKit.framework */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D46560417DD44E400A72E4C /* NSObject+ORDebounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ORDebounce.h"; sourceTree = "<group>"; };
+		0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ORDebounce.m"; sourceTree = "<group>"; };
 		0D79491017D9F926006DC4AD /* ORMapView Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORMapView Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D79491317D9F926006DC4AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D79491517D9F926006DC4AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +151,8 @@
 		0DBEFD7217DCA99400D2F63E /* ORMapView */ = {
 			isa = PBXGroup;
 			children = (
+				0D46560417DD44E400A72E4C /* NSObject+ORDebounce.h */,
+				0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */,
 				0DBEFD7D17DCE5C900D2F63E /* ADMapCluster.h */,
 				0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */,
 				0DBEFD7F17DCE5C900D2F63E /* ADMapPointAnnotation.h */,
@@ -203,9 +208,6 @@
 							};
 						};
 					};
-					0D79493317D9F926006DC4AD = {
-						TestTargetID = 0D79490F17D9F926006DC4AD;
-					};
 				};
 			};
 			buildConfigurationList = 0D79490B17D9F926006DC4AD /* Build configuration list for PBXProject "ORMapView Example" */;
@@ -248,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */,
+				0D46560617DD44E400A72E4C /* NSObject+ORDebounce.m in Sources */,
 				0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */,
 				0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */,
 				0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */,

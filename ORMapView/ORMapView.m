@@ -8,6 +8,9 @@
 
 #import "ORMapView_Private.h"
 
+#import "NSObject+ORDebounce.h"
+
+
 @implementation ORMapView
 
 #pragma mark - Initialization & Destruction
@@ -84,7 +87,7 @@
     [_userAnnotations addObject:annotation];
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     } else {
         [super addAnnotation:annotation];
     }
@@ -95,7 +98,7 @@
     [_userAnnotations addObjectsFromArray:annotations];
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     } else {
         [super addAnnotations:annotations];
     }
@@ -106,7 +109,7 @@
     [_userAnnotations removeObject:annotation];
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     } else {
         [super removeAnnotation:annotation];
     }
@@ -117,7 +120,7 @@
     [_userAnnotations removeObjectsInArray:annotations];
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     } else {
         [super removeAnnotations:annotations];
     }
@@ -135,7 +138,7 @@
     [self _removeAllAnnotationsFromMapViewExcludingUserLocation];
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     } else {
         [super addAnnotations:_userAnnotations];
     }
@@ -146,7 +149,7 @@
     NSLog(@"_maximumNumberOfClusters changed to: %d", self.maximumNumberOfClusters);
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     }
 }
 
@@ -155,7 +158,7 @@
     NSLog(@"_clusterDiscriminationPower changed to: %f", self.clusterDiscriminationPower);
     
     if(self.clusteringEnabled) {
-        [self _recluster];
+        [self _reclusterOnce];
     }
 }
 
@@ -190,8 +193,16 @@
 
 #pragma mark - Private Clustering
 
+/* Wrapper method for _recluster that reclusters only once per run-loop run */
+- (void)_reclusterOnce
+{
+    [self performSelectorOnMainThreadOnce:@selector(__recluster)];
+}
 
-- (void)_recluster
+/* This method should only be called by _reclusterOnce so clustering happens
+ * only once per run-loop run.
+ */
+- (void)__recluster
 {
     if(_reclusteringInProcess) {
         _reclusterAfterCurrentClusteringFinished = YES;
@@ -220,7 +231,7 @@
             if(_reclusterAfterCurrentClusteringFinished) {
                 _reclusterAfterCurrentClusteringFinished = NO;
                 
-                [self _recluster];
+                [self _reclusterOnce];
             }
         });
     });

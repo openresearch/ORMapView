@@ -51,15 +51,13 @@
 
 - (IBAction)annotationsCountStepperValueChanged
 {
+    
+    
     if(self.annotationsCountStepper.value > self.mapView.annotations.count) {
-
-        NSMutableArray* annotations = [NSMutableArray arrayWithCapacity:ANNOTATIONS_STEP_VALUE];
-        
         for(int i=0; i<ANNOTATIONS_STEP_VALUE; i++) {
             ORRandomAnnotation* randomAnnotation = [[ORRandomAnnotation alloc] init];
-            [annotations addObject:randomAnnotation];
+            [self.mapView addAnnotation:randomAnnotation];
         }
-        [self.mapView addAnnotations:annotations];
         
     } else {
         NSMutableArray* annotations = [NSMutableArray arrayWithCapacity:ANNOTATIONS_STEP_VALUE];
