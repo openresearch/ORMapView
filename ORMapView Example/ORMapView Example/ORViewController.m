@@ -24,6 +24,11 @@
 {
     [super viewDidLoad];
     
+//    // Example on how to use a custom cluster view class with one line
+//    // as an alternative to returing a view in mapView:viewForAnnotation:
+//    // as shown below.
+//    // Clusters have a red pin.
+//    self.mapView.defaultClusterViewClass = [MKPinAnnotationView class];
     
     // Setup annotation stepper
     self.annotationsCountStepper.minimumValue = 0;
@@ -87,6 +92,7 @@
         MKPinAnnotationView * pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ORRandomAnnotation"];
         if (!pinView) {
             pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ORRandomAnnotation"];
+            pinView.pinColor = MKPinAnnotationColorPurple;
         }
         else {
             pinView.annotation = annotation;
@@ -95,8 +101,7 @@
     
     }
     
-// Example of how to override default cluster view:
-//
+//    // Example of how to override default cluster view:
 //    if([annotation isKindOfClass:[ORClusterAnnotation class]]) {
 //        MKPinAnnotationView * clusterView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ORClusterAnnotation"];
 //        if (!clusterView) {

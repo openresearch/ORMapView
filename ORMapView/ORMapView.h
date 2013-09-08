@@ -60,4 +60,16 @@
 @property(nonatomic, readonly) NSArray *annotations;
 
 
+/** ORMapView comes with a default cluster MKAnnotationView subclass.
+  * If the MKMapViewDelegate mapView:viewForAnnotation: method does return nil,
+  * ORClusterAnnotationView is used.
+  * You can override this behavior to use a custom class instead of ORClusterAnnotationView
+  * by setting this property.
+  * Of course you can still set a custom view in your mapView:viewForAnnotation: delegate
+  * by return a view for the ORClusterAnnotation class.
+  * This is just a convinience and to use ORMapView as drop-in replacement for SuperPin.
+  */
+@property(assign) Class defaultClusterViewClass;
+
+
 @end

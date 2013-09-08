@@ -18,6 +18,8 @@
     _maximumNumberOfClusters = 32;
     _clusterDiscriminationPower = 1.0;
     
+    _defaultClusterViewClass = [ORClusterAnnotationView class];
+    
     _userAnnotations = [NSMutableArray array];
     
     [super setDelegate:self];
@@ -288,11 +290,11 @@
 - (MKAnnotationView *)_or_mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
 {
     if([annotation isKindOfClass:[ORClusterAnnotation class]]) {
-        NSString* reuseIdentifier = NSStringFromClass([ORClusterAnnotation class]);
+        NSString* reuseIdentifier = NSStringFromClass(self.defaultClusterViewClass);
         
         MKAnnotationView* annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
         if (!annotationView) {
-            annotationView = [[ORClusterAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+            annotationView = [[self.defaultClusterViewClass alloc] initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
         } else {
             [annotationView setAnnotation:annotation];
         }
