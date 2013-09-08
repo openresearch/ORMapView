@@ -47,7 +47,7 @@
 - (void)drawRect:(CGRect)rect
 {
     // System tint color or black default
-    UIColor* tintColor;
+    UIColor* tintColor = nil;
     if([self respondsToSelector:@selector(tintColor)]) {
         tintColor = [self performSelector:@selector(tintColor)];
     }

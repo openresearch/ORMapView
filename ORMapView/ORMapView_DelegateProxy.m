@@ -101,7 +101,7 @@
 /** This method is not just a proxy */
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
 {
-    MKAnnotationView* resultFromDelegate;
+    MKAnnotationView* resultFromDelegate = nil;
     if (self.realDelegate && [self.realDelegate respondsToSelector:@selector(mapView:viewForAnnotation:)]) {
         resultFromDelegate = [self.realDelegate mapView:mapView viewForAnnotation:annotation];
     }
