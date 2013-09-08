@@ -19,7 +19,7 @@
 {
     self = [super init];
     if (self) {
-        self.coordinate = [self _randomCoordinate];
+        _coordinate = [self _randomCoordinate];
     }
     return self;
 }

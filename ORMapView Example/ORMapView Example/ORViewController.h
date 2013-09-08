@@ -14,5 +14,6 @@
 
 @property(strong) IBOutlet ORMapView* mapView;
 @property(strong) IBOutlet UIStepper* annotationsCountStepper;
+@property(strong) IBOutlet UISwitch* clusterSwitch;
 
 @end

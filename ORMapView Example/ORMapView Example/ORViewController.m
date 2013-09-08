@@ -12,8 +12,8 @@
 #import "ORRandomAnnotation.h"
 
 #define ANNOTATIONS_INITIAL_COUNT 1000
-#define ANNOTATIONS_STEP_VALUE 100
-#define ANNOTATIONS_MAXIMUM_COUNT 1000000
+#define ANNOTATIONS_STEP_VALUE 1000
+#define ANNOTATIONS_MAXIMUM_COUNT 10000000
 
 @interface ORViewController ()
 @end
@@ -30,6 +30,9 @@
     self.annotationsCountStepper.maximumValue = ANNOTATIONS_MAXIMUM_COUNT;
     self.annotationsCountStepper.value = ANNOTATIONS_INITIAL_COUNT;
     self.annotationsCountStepper.stepValue = ANNOTATIONS_STEP_VALUE;
+    
+    // Setup cluster switch
+    self.clusterSwitch.on = self.mapView.clusteringEnabled;
 	
     // Generate initial annotations
     NSMutableArray* annotations = [NSMutableArray arrayWithCapacity:ANNOTATIONS_INITIAL_COUNT];
@@ -44,6 +47,7 @@
 - (IBAction)annotationsCountStepperValueChanged
 {
     if(self.annotationsCountStepper.value > self.mapView.annotations.count) {
+
         NSMutableArray* annotations = [NSMutableArray arrayWithCapacity:ANNOTATIONS_STEP_VALUE];
         
         for(int i=0; i<ANNOTATIONS_STEP_VALUE; i++) {
@@ -68,6 +72,54 @@
         }
         
         [self.mapView removeAnnotations:annotations];
+    }
+}
+
+- (IBAction)clusterSwitchChanged
+{
+    self.mapView.clusteringEnabled = self.clusterSwitch.on;
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if([annotation isKindOfClass:[ORRandomAnnotation class]]) {
+        MKPinAnnotationView * pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ORRandomAnnotation"];
+        if (!pinView) {
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ORRandomAnnotation"];
+        }
+        else {
+            pinView.annotation = annotation;
+        }
+        return pinView;
+    
+    }
+    
+// Example of how to override default cluster view:
+//
+//    if([annotation isKindOfClass:[ORClusterAnnotation class]]) {
+//        MKPinAnnotationView * clusterView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ORClusterAnnotation"];
+//        if (!clusterView) {
+//            clusterView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ORClusterAnnotation"];
+//            clusterView.pinColor = MKPinAnnotationColorGreen;
+//        }
+//        else {
+//            clusterView.annotation = annotation;
+//        }
+//        return clusterView;
+//    }
+    
+    return nil;
+}
+
+
+- (void)mapView:(MKMapView *)aMapView didSelectAnnotationView:(MKAnnotationView *)view {
+    id<MKAnnotation> annotation = view.annotation;
+    
+    if([annotation isKindOfClass:[ORClusterAnnotation class]]) {
+        ORClusterAnnotation *clusterAnnotation = (ORClusterAnnotation*)annotation;
+        MKCoordinateRegion region = MKCoordinateRegionForMapRect(clusterAnnotation.encompassingMapRect);
+        [aMapView setRegion:[aMapView regionThatFits:region] animated:YES];
     }
 }
 

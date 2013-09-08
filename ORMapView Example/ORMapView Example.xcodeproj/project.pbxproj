@@ -25,6 +25,11 @@
 		0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7417DCA99400D2F63E /* ORMapView.m */; };
 		0DBEFD7717DCAC4300D2F63E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBEFD7617DCAC4300D2F63E /* MapKit.framework */; };
 		0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */; };
+		0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DBEFD8617DCE8A900D2F63E /* ORMapView_DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */; };
+		0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */; };
+		0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,17 @@
 		0DBEFD7617DCAC4300D2F63E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0DBEFD7A17DCCD5D00D2F63E /* ORRandomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORRandomAnnotation.h; sourceTree = "<group>"; };
 		0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORRandomAnnotation.m; sourceTree = "<group>"; };
+		0DBEFD7D17DCE5C900D2F63E /* ADMapCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapCluster.h; sourceTree = "<group>"; };
+		0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapCluster.m; sourceTree = "<group>"; };
+		0DBEFD7F17DCE5C900D2F63E /* ADMapPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapPointAnnotation.h; sourceTree = "<group>"; };
+		0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapPointAnnotation.m; sourceTree = "<group>"; };
+		0DBEFD8317DCE87600D2F63E /* ORMapView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORMapView_Private.h; sourceTree = "<group>"; };
+		0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORMapView_DelegateProxy.m; sourceTree = "<group>"; };
+		0DBEFD8717DCFD8100D2F63E /* ORClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotation.h; sourceTree = "<group>"; };
+		0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORClusterAnnotation.m; sourceTree = "<group>"; };
+		0DBEFD8A17DCFE4D00D2F63E /* ORClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotationView.h; sourceTree = "<group>"; };
+		0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORClusterAnnotationView.m; sourceTree = "<group>"; };
+		0DBEFD8D17DD026F00D2F63E /* ORClusterAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotation_Private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +187,19 @@
 		0DBEFD7217DCA99400D2F63E /* ORMapView */ = {
 			isa = PBXGroup;
 			children = (
+				0DBEFD7D17DCE5C900D2F63E /* ADMapCluster.h */,
+				0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */,
+				0DBEFD7F17DCE5C900D2F63E /* ADMapPointAnnotation.h */,
+				0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */,
 				0DBEFD7317DCA99400D2F63E /* ORMapView.h */,
+				0DBEFD8317DCE87600D2F63E /* ORMapView_Private.h */,
 				0DBEFD7417DCA99400D2F63E /* ORMapView.m */,
+				0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */,
+				0DBEFD8717DCFD8100D2F63E /* ORClusterAnnotation.h */,
+				0DBEFD8D17DD026F00D2F63E /* ORClusterAnnotation_Private.h */,
+				0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */,
+				0DBEFD8A17DCFE4D00D2F63E /* ORClusterAnnotationView.h */,
+				0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */,
 			);
 			name = ORMapView;
 			path = ../ORMapView;
@@ -284,9 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */,
+				0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */,
+				0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */,
 				0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */,
+				0DBEFD8617DCE8A900D2F63E /* ORMapView_DelegateProxy.m in Sources */,
 				0D79492017D9F926006DC4AD /* main.m in Sources */,
 				0D79492417D9F926006DC4AD /* ORAppDelegate.m in Sources */,
+				0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */,
 				0D79492D17D9F926006DC4AD /* ORViewController.m in Sources */,
 				0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */,
 			);
