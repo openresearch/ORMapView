@@ -92,6 +92,10 @@
     [self setNeedsDisplay];
 }
 
+- (void)setAnnotation:(id<MKAnnotation>)annotation {
+    [super setAnnotation:annotation];
+    [self setNeedsDisplay];
+}
 
 - (NSString*)_text
 {
