@@ -331,7 +331,7 @@
         }
     }
     
-    if ([keyPath isEqual:@"maximumNumberOfClusters"]) {
+    else if ([keyPath isEqual:@"maximumNumberOfClusters"]) {
         NSObject* new = [change objectForKey:NSKeyValueChangeNewKey];
         NSObject* old = [change objectForKey:NSKeyValueChangeOldKey];
         
@@ -340,16 +340,16 @@
         }
     }
     
-    if ([keyPath isEqual:@"clusterDiscriminationPower"]) {
+    else if ([keyPath isEqual:@"clusterDiscriminationPower"]) {
         NSObject* new = [change objectForKey:NSKeyValueChangeNewKey];
         NSObject* old = [change objectForKey:NSKeyValueChangeOldKey];
         
         if(![new isEqual:old]) {
             [self _clusterDiscriminationPowerChanged];
         }
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
-
-    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 
