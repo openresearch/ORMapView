@@ -10,4 +10,6 @@
 
 @interface ORClusterAnnotationView : MKAnnotationView
 
+@property(assign,nonatomic) NSInteger strokeWidth;
+
 @end

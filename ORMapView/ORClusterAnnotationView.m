@@ -33,6 +33,7 @@
         
         self.opaque = NO;
         
+        self.strokeWidth = 1;
         
         // Create a square that contains the text
         CGSize textSize = [[self _text] sizeWithFont:self.font];
@@ -65,13 +66,13 @@
     [[UIColor whiteColor] setFill];
     [ovalPath fill];
     [tintColor setStroke];
-    ovalPath.lineWidth = 1;
+    ovalPath.lineWidth = self.strokeWidth;
     [ovalPath stroke];
     
     
     
     // Text
-    [tintColor setFill];
+    [[UIColor blackColor] setFill];
     
     NSString* annotationsCount = [self _text];
     
