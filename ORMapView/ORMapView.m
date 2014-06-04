@@ -146,7 +146,7 @@
 
 - (void)_maximumNumberOfClustersChanged
 {
-    NSLog(@"_maximumNumberOfClusters changed to: %d", self.maximumNumberOfClusters);
+    NSLog(@"_maximumNumberOfClusters changed to: %lu", (unsigned long)self.maximumNumberOfClusters);
     
     if(self.clusteringEnabled) {
         [self _reclusterOnce];

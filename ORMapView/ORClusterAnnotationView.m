@@ -101,7 +101,7 @@
 - (NSString*)_text
 {
     ORClusterAnnotation* clusterAnnotation = (ORClusterAnnotation*)self.annotation;
-    return [NSString stringWithFormat:@"%d", clusterAnnotation.count];
+    return [NSString stringWithFormat:@"%lu", (unsigned long)clusterAnnotation.count];
 }
 
 
