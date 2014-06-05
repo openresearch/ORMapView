@@ -20,7 +20,7 @@
     BOOL _reclusterAfterCurrentClusteringFinished;
 }
 
-@property(nonatomic, assign) id<MKMapViewDelegate> realDelegate;
+@property(weak, nonatomic) id<MKMapViewDelegate> realDelegate;
 
 
 #pragma mark - MKMapViewDelegate Intercepts
