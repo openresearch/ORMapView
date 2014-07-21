@@ -133,8 +133,6 @@
 
 - (void)_clusteringEnabledChanged
 {
-    NSLog(@"_clusteringEnabled changed to: %d", self.clusteringEnabled);
-    
     [self _removeAllAnnotationsFromMapViewExcludingUserLocation];
     
     if(self.clusteringEnabled) {
@@ -146,17 +144,13 @@
 
 - (void)_maximumNumberOfClustersChanged
 {
-    NSLog(@"_maximumNumberOfClusters changed to: %lu", (unsigned long)self.maximumNumberOfClusters);
-    
     if(self.clusteringEnabled) {
         [self _reclusterOnce];
     }
 }
 
 - (void)_clusterDiscriminationPowerChanged
-{
-    NSLog(@"_clusterDiscriminationPower changed to: %f", self.clusterDiscriminationPower);
-    
+{    
     if(self.clusteringEnabled) {
         [self _reclusterOnce];
     }
