@@ -36,7 +36,8 @@
         self.strokeWidth = 1;
         
         // Create a square that contains the text
-        CGSize textSize = [[self _text] sizeWithFont:self.font];
+        CGSize textSize = [[self _text] sizeWithAttributes: @{NSFontAttributeName: self.font}];
+
         NSUInteger maxValue = ceil(MAX(textSize.height, textSize.width));
         self.frame = CGRectMake(0, 0, maxValue + 2*TEXT_INSET, maxValue + 2*TEXT_INSET);
         
@@ -76,12 +77,18 @@
     
     NSString* annotationsCount = [self _text];
     
-    CGSize textSize = [annotationsCount sizeWithFont:self.font];
+    CGSize textSize = [annotationsCount sizeWithAttributes: @{NSFontAttributeName: self.font}];
     CGFloat textY = (rect.size.height - textSize.height)/2.0;
     CGFloat textX = (rect.size.width - textSize.width)/2.0;
     
     CGRect textRect = CGRectMake(textX, textY, textSize.width, textSize.height);
-    [annotationsCount drawInRect: textRect withFont:self.font lineBreakMode: NSLineBreakByTruncatingMiddle alignment: NSTextAlignmentCenter];
+    
+    NSMutableParagraphStyle *textStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+    textStyle.lineBreakMode = NSLineBreakByTruncatingMiddle;
+    textStyle.alignment = NSTextAlignmentCenter;
+    
+    
+    [annotationsCount drawInRect:textRect withAttributes:@{NSFontAttributeName:self.font, NSParagraphStyleAttributeName:textStyle}];
 }
 
 
