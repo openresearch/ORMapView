@@ -80,14 +80,11 @@
     
     NSString* annotationsCount = [self _text];
     
-<<<<<<< HEAD
-    CGSize textSize = [annotationsCount sizeWithAttributes: @{NSFontAttributeName: self.font}];
-=======
+
     UIFont *font = self.font;
     NSDictionary *attributes = @{NSFontAttributeName: font};
     
     CGSize textSize = [annotationsCount sizeWithAttributes:attributes];
->>>>>>> bla
     CGFloat textY = (rect.size.height - textSize.height)/2.0;
     CGFloat textX = (rect.size.width - textSize.width)/2.0;
     
