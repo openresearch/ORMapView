@@ -36,11 +36,9 @@
         self.strokeWidth = 1;
         
         // Create a square that contains the text
-        
         UIFont *font = self.font;
         NSDictionary *attributes = @{NSFontAttributeName: font};
-        
-        CGSize textSize = [[self _text] sizeWithAttributes: @{NSFontAttributeName: self.font}];
+        CGSize textSize = [[self _text] sizeWithAttributes: attributes];
         NSUInteger maxValue = ceil(MAX(textSize.height, textSize.width));
         self.frame = CGRectMake(0, 0, maxValue + 2*TEXT_INSET, maxValue + 2*TEXT_INSET);
         
