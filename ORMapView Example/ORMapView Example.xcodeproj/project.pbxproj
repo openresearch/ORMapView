@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D46560617DD44E400A72E4C /* NSObject+ORDebounce.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */; };
 		0D79491417D9F926006DC4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491317D9F926006DC4AD /* Foundation.framework */; };
 		0D79491617D9F926006DC4AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491517D9F926006DC4AD /* CoreGraphics.framework */; };
 		0D79491817D9F926006DC4AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D79491717D9F926006DC4AD /* UIKit.framework */; };
@@ -17,14 +16,9 @@
 		0D79492717D9F926006DC4AD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D79492517D9F926006DC4AD /* Main_iPhone.storyboard */; };
 		0D79492A17D9F926006DC4AD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D79492817D9F926006DC4AD /* Main_iPad.storyboard */; };
 		0D79492D17D9F926006DC4AD /* ORViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D79492C17D9F926006DC4AD /* ORViewController.m */; };
-		0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7417DCA99400D2F63E /* ORMapView.m */; };
+		0D7C07A51D400C480077654A /* ORMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7C07A41D400C480077654A /* ORMap.framework */; };
 		0DBEFD7717DCAC4300D2F63E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBEFD7617DCAC4300D2F63E /* MapKit.framework */; };
 		0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */; };
-		0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */; };
-		0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */; };
-		0DBEFD8617DCE8A900D2F63E /* ORMapView_DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */; };
-		0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */; };
-		0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */; };
 		0DBEFD9117DD259600D2F63E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8E17DD259600D2F63E /* Default-568h@2x.png */; };
 		0DBEFD9217DD259600D2F63E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBEFD8F17DD259600D2F63E /* Default.png */; };
 		0DBEFD9317DD259600D2F63E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBEFD9017DD259600D2F63E /* Default@2x.png */; };
@@ -32,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D46560417DD44E400A72E4C /* NSObject+ORDebounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ORDebounce.h"; sourceTree = "<group>"; };
-		0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ORDebounce.m"; sourceTree = "<group>"; };
 		0D79491017D9F926006DC4AD /* ORMapView Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORMapView Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D79491317D9F926006DC4AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D79491517D9F926006DC4AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,22 +41,10 @@
 		0D79492B17D9F926006DC4AD /* ORViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORViewController.h; sourceTree = "<group>"; };
 		0D79492C17D9F926006DC4AD /* ORViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORViewController.m; sourceTree = "<group>"; };
 		0D79493517D9F926006DC4AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0DBEFD7317DCA99400D2F63E /* ORMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORMapView.h; sourceTree = "<group>"; };
-		0DBEFD7417DCA99400D2F63E /* ORMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORMapView.m; sourceTree = "<group>"; };
+		0D7C07A41D400C480077654A /* ORMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ORMap.framework; path = "../ORMap/build/Debug-iphoneos/ORMap.framework"; sourceTree = "<group>"; };
 		0DBEFD7617DCAC4300D2F63E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0DBEFD7A17DCCD5D00D2F63E /* ORRandomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORRandomAnnotation.h; sourceTree = "<group>"; };
 		0DBEFD7B17DCCD5D00D2F63E /* ORRandomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORRandomAnnotation.m; sourceTree = "<group>"; };
-		0DBEFD7D17DCE5C900D2F63E /* ADMapCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapCluster.h; sourceTree = "<group>"; };
-		0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapCluster.m; sourceTree = "<group>"; };
-		0DBEFD7F17DCE5C900D2F63E /* ADMapPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapPointAnnotation.h; sourceTree = "<group>"; };
-		0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapPointAnnotation.m; sourceTree = "<group>"; };
-		0DBEFD8317DCE87600D2F63E /* ORMapView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORMapView_Private.h; sourceTree = "<group>"; };
-		0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORMapView_DelegateProxy.m; sourceTree = "<group>"; };
-		0DBEFD8717DCFD8100D2F63E /* ORClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotation.h; sourceTree = "<group>"; };
-		0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORClusterAnnotation.m; sourceTree = "<group>"; };
-		0DBEFD8A17DCFE4D00D2F63E /* ORClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotationView.h; sourceTree = "<group>"; };
-		0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORClusterAnnotationView.m; sourceTree = "<group>"; };
-		0DBEFD8D17DD026F00D2F63E /* ORClusterAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORClusterAnnotation_Private.h; sourceTree = "<group>"; };
 		0DBEFD8E17DD259600D2F63E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0DBEFD8F17DD259600D2F63E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0DBEFD9017DD259600D2F63E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -76,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7C07A51D400C480077654A /* ORMap.framework in Frameworks */,
 				0DEECC2D17DD24D4007B4251 /* CoreLocation.framework in Frameworks */,
 				0D79491617D9F926006DC4AD /* CoreGraphics.framework in Frameworks */,
 				0D79491817D9F926006DC4AD /* UIKit.framework in Frameworks */,
@@ -90,7 +71,6 @@
 		0D79490717D9F926006DC4AD = {
 			isa = PBXGroup;
 			children = (
-				0DBEFD7217DCA99400D2F63E /* ORMapView */,
 				0D79491917D9F926006DC4AD /* ORMapView Example */,
 				0D79491217D9F926006DC4AD /* Frameworks */,
 				0D79491117D9F926006DC4AD /* Products */,
@@ -108,6 +88,7 @@
 		0D79491217D9F926006DC4AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D7C07A41D400C480077654A /* ORMap.framework */,
 				0DEECC2C17DD24D4007B4251 /* CoreLocation.framework */,
 				0DBEFD7617DCAC4300D2F63E /* MapKit.framework */,
 				0D79491317D9F926006DC4AD /* Foundation.framework */,
@@ -146,29 +127,6 @@
 				0DBEFD9017DD259600D2F63E /* Default@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0DBEFD7217DCA99400D2F63E /* ORMapView */ = {
-			isa = PBXGroup;
-			children = (
-				0D46560417DD44E400A72E4C /* NSObject+ORDebounce.h */,
-				0D46560517DD44E400A72E4C /* NSObject+ORDebounce.m */,
-				0DBEFD7D17DCE5C900D2F63E /* ADMapCluster.h */,
-				0DBEFD7E17DCE5C900D2F63E /* ADMapCluster.m */,
-				0DBEFD7F17DCE5C900D2F63E /* ADMapPointAnnotation.h */,
-				0DBEFD8017DCE5C900D2F63E /* ADMapPointAnnotation.m */,
-				0DBEFD7317DCA99400D2F63E /* ORMapView.h */,
-				0DBEFD8317DCE87600D2F63E /* ORMapView_Private.h */,
-				0DBEFD7417DCA99400D2F63E /* ORMapView.m */,
-				0DBEFD8517DCE8A900D2F63E /* ORMapView_DelegateProxy.m */,
-				0DBEFD8717DCFD8100D2F63E /* ORClusterAnnotation.h */,
-				0DBEFD8D17DD026F00D2F63E /* ORClusterAnnotation_Private.h */,
-				0DBEFD8817DCFD8100D2F63E /* ORClusterAnnotation.m */,
-				0DBEFD8A17DCFE4D00D2F63E /* ORClusterAnnotationView.h */,
-				0DBEFD8B17DCFE4D00D2F63E /* ORClusterAnnotationView.m */,
-			);
-			name = ORMapView;
-			path = ../ORMapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,15 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBEFD8917DCFD8100D2F63E /* ORClusterAnnotation.m in Sources */,
-				0D46560617DD44E400A72E4C /* NSObject+ORDebounce.m in Sources */,
-				0DBEFD8C17DCFE4D00D2F63E /* ORClusterAnnotationView.m in Sources */,
-				0DBEFD8117DCE5C900D2F63E /* ADMapCluster.m in Sources */,
-				0DBEFD7517DCA99400D2F63E /* ORMapView.m in Sources */,
-				0DBEFD8617DCE8A900D2F63E /* ORMapView_DelegateProxy.m in Sources */,
 				0D79492017D9F926006DC4AD /* main.m in Sources */,
 				0D79492417D9F926006DC4AD /* ORAppDelegate.m in Sources */,
-				0DBEFD8217DCE5C900D2F63E /* ADMapPointAnnotation.m in Sources */,
 				0D79492D17D9F926006DC4AD /* ORViewController.m in Sources */,
 				0DBEFD7C17DCCD5D00D2F63E /* ORRandomAnnotation.m in Sources */,
 			);
@@ -324,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -372,7 +323,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -387,7 +338,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ORMapView Example/ORMapView Example-Prefix.pch";
 				INFOPLIST_FILE = "ORMapView Example/ORMapView Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

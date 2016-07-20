@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ORMapView.h"
+@import ORMap;
 
 @interface ORViewController : UIViewController <MKMapViewDelegate>
 

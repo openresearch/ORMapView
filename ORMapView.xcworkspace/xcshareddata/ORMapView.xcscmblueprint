@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "017F272B7253DF06525E3E34F0D2A1C653574089",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "017F272B7253DF06525E3E34F0D2A1C653574089" : 0,
+    "537320856EF5CC2FF051A3A0A59D5CE89D278601" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0A571F10-196A-4E93-AE60-DEDAE686E966",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "017F272B7253DF06525E3E34F0D2A1C653574089" : "ORMapView\/",
+    "537320856EF5CC2FF051A3A0A59D5CE89D278601" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ORMapView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ORMapView.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/openresearch\/ORMapView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "017F272B7253DF06525E3E34F0D2A1C653574089"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.openresearch.com:oeamtc\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "537320856EF5CC2FF051A3A0A59D5CE89D278601"
+    }
+  ]
+}
