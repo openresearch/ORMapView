@@ -155,19 +155,21 @@
 
 
 #pragma mark Managing Overlay Views
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id < MKOverlay >)overlay
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView
+            rendererForOverlay:(id<MKOverlay>)overlay
 {
-    if (self.realDelegate && [self.realDelegate respondsToSelector:@selector(mapView:viewForOverlay:)]) {
-        return [self.realDelegate mapView:mapView viewForOverlay:overlay];
+    if (self.realDelegate && [self.realDelegate respondsToSelector:@selector(mapView:rendererForOverlay:)]) {
+        return [self.realDelegate mapView:mapView rendererForOverlay:overlay];
     } else {
         return nil;
     }
 }
 
-- (void)mapView:(MKMapView *)mapView didAddOverlayViews:(NSArray *)overlayViews
+- (void)mapView:(MKMapView *)mapView didAddOverlayRenderers:(NSArray<MKOverlayRenderer *> *)renderers
 {
-    if (self.realDelegate && [self.realDelegate respondsToSelector:@selector(mapView:didAddOverlayViews:)]) {
-        [self.realDelegate mapView:mapView didAddOverlayViews:overlayViews];
+    if (self.realDelegate && [self.realDelegate respondsToSelector:@selector(mapView:didAddOverlayRenderers:)]) {
+        [self.realDelegate mapView:mapView didAddOverlayRenderers:renderers];
     }
 }
 
