@@ -161,11 +161,11 @@
 			};
 			buildConfigurationList = 0D7C07741D400BE30077654A /* Build configuration list for PBXProject "ORMap" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 0D7C07701D400BE30077654A;
 			productRefGroup = 0D7C077B1D400BE30077654A /* Products */;
