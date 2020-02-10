@@ -216,15 +216,15 @@
             [mapPointAnnotations addObject:mapPointAnnotation];
         }
         
-        _rootMapCluster = [ADMapCluster rootClusterForAnnotations:mapPointAnnotations gamma:self.clusterDiscriminationPower clusterTitle:@"%d" showSubtitle:NO];
+       self-> _rootMapCluster = [ADMapCluster rootClusterForAnnotations:mapPointAnnotations gamma:self.clusterDiscriminationPower clusterTitle:@"%d" showSubtitle:NO];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self _clusterInMapRect:self.visibleMapRect];
             
-            _reclusteringInProcess = NO;
+            self-> _reclusteringInProcess = NO;
             
-            if(_reclusterAfterCurrentClusteringFinished) {
-                _reclusterAfterCurrentClusteringFinished = NO;
+            if(self-> _reclusterAfterCurrentClusteringFinished) {
+               self-> _reclusterAfterCurrentClusteringFinished = NO;
                 
                 [self _reclusterOnce];
             }

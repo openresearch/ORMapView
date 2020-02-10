@@ -170,7 +170,7 @@
             }
             leftMapRect = MKMapRectMake(XMin, YMin, XMax - XMin, YMax - YMin);
             
-            XMin = MAXFLOAT, XMax = 0.0, YMin = MAXFLOAT, YMax = 0.0;
+            (void)(XMin = MAXFLOAT), (void)(XMax = 0.0), (void)(YMin = MAXFLOAT), YMax = 0.0;
             for (ADMapPointAnnotation * annotation in rightAnnotations) {
                 const MKMapPoint point = annotation.mapPoint;
                 if (point.x > XMax) {
