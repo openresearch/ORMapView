@@ -1,0 +1,6 @@
+framework module ORMap {
+  umbrella header "ORMap.h"
+
+  export *
+  module * { export * }
+}
