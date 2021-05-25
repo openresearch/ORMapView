@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		44apLjV8oLqCNy+MWCzOfHQJxVQ=
+		KDNIJmTjBBR2qFBQNbFu4yOJKo0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -37,10 +37,6 @@
 	<dict>
 		<key>Headers/NSObject+ORDebounce.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kbuyEmXIUXhxy6Ca4FZTe5UT1JU=
-			</data>
 			<key>hash2</key>
 			<data>
 			1MpEbmXwmkkfeakUQIyOrYom5GEMsJnK4j9wRVkZNmU=
@@ -48,10 +44,6 @@
 		</dict>
 		<key>Headers/ORClusterAnnotation.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Pgd0umy39OuoL3sp2omcAuCHL10=
-			</data>
 			<key>hash2</key>
 			<data>
 			KpjqLTStPngrjysOkC8gwmm50hz/wuJ0taHMZyBsaWQ=
@@ -59,10 +51,6 @@
 		</dict>
 		<key>Headers/ORClusterAnnotationView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jo4KVv1UW96+7j6UTNUO78dKGhI=
-			</data>
 			<key>hash2</key>
 			<data>
 			AkO1EeJs6tv6dxTVYk+q9nis0NNhzytyDaQQFeoA0Wg=
@@ -70,10 +58,6 @@
 		</dict>
 		<key>Headers/ORMap.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lZkJdG1b94y4DsKBOn7Z8wn1FQU=
-			</data>
 			<key>hash2</key>
 			<data>
 			iQ6wtAGSW18D5Cf+5DdOMtXgwVvb7UUJ0QAI4YESlxw=
@@ -81,10 +65,6 @@
 		</dict>
 		<key>Headers/ORMapView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Jx94aklXQjL1Lh0FrSwLo8ZhR/M=
-			</data>
 			<key>hash2</key>
 			<data>
 			3sOEQQLOSa44OT/8gN9Uj40jy20gCgQkATCfEkQHPts=
@@ -92,10 +72,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LwTtmsZQ5Tu/E6srNTawmvaphik=
-			</data>
 			<key>hash2</key>
 			<data>
 			4dKdGyC/aWsFf+FiBG8vSm19ThXQWlDYV7QMounlW58=
