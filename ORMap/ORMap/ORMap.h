@@ -15,9 +15,9 @@ FOUNDATION_EXPORT double ORMapVersionNumber;
 FOUNDATION_EXPORT const unsigned char ORMapVersionString[];
 
 
-#import <ORMap/ORMapView.h>
-#import <ORMap/ORClusterAnnotation.h>
-#import <ORMap/ORClusterAnnotationView.h>
+#import "ORMap/ORMapView.h"
+#import "ORMap/ORClusterAnnotation.h"
+#import "ORMap/ORClusterAnnotationView.h"
 
-#import <ORMap/NSObject+ORDebounce.h>
+#import "ORMap/NSObject+ORDebounce.h"
 
